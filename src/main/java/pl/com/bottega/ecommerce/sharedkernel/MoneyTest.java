@@ -23,5 +23,15 @@ public class MoneyTest {
 
 		assertThat(money1.add(money2), is(equalTo(expected)));
 	}
+	
+	
+	@Test
+	public void test_subtract_20_and_10_shouldReturn10() {
+		Money money1 = new Money(10,"$");
+		Money money2 = new Money(20,"$");
+		Money expected = new Money(10,"$");
+		
+		assertThat(money2.subtract(money1),is(equalTo(expected)));
+	}
 
 }
