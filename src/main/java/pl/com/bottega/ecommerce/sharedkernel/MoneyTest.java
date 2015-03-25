@@ -21,7 +21,7 @@ public class MoneyTest {
 		Money money2 = new Money(10, "$");
 		Money expected = new Money(20, "$");
 
-		assertThat(money1.add(money2), is(equalTo(expected)));
+		assertThat(money1.add(money2),is(equalTo(expected)));
 	}
 	
 	
@@ -34,4 +34,11 @@ public class MoneyTest {
 		assertThat(money2.subtract(money1),is(equalTo(expected)));
 	}
 
+	@Test
+	public void test_multiply_10_and_10_ShouldReturn100() {
+		Money money1 = new Money(10,"PLN");
+		Money expected = new Money(100,"PLN");
+		
+		assertThat(money1.multiplyBy(10),is(equalTo(expected)));
+	}
 }
