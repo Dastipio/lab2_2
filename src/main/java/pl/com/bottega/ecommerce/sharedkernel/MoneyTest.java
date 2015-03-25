@@ -14,5 +14,14 @@ public class MoneyTest {
 		
 		assertThat(money1,is(equalTo(expected_value)));
 	}
+	
+	@Test
+	public void test_add_10_and_10_shouldReturn20() {
+		Money money1 = new Money(10, "$");
+		Money money2 = new Money(10, "$");
+		Money expected = new Money(20, "$");
+
+		assertThat(money1.add(money2), is(equalTo(expected)));
+	}
 
 }
