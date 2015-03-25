@@ -48,5 +48,14 @@ public class MoneyTest {
 
 		assertThat(money1.lessThan(money2), is(true));
 	}
+	
+	
+	@Test
+	public void test_greaterThan_money1_to_money2_ShouldReturnTrue() {
+		Money money1 = new Money(10,"$");
+		Money money2 = new Money(20,"$");
+	
+		assertThat(money2.greaterThan(money1),is(true));
+	}
 
 }
